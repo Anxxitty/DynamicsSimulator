@@ -366,11 +366,10 @@ FodyWeavers.xsd
 /Project.png
 /Project.xcf
 /DynamicsSimulator.sln
-/DynamicsSimulator/tennis-ball.png
+/DynamicsSimulator/object.png
 /DynamicsSimulator/DynamicsSimulator.vcxproj
 /DynamicsSimulator/DynamicsSimulator.vcxproj.filters
 /DynamicsSimulator/DynamicsSimulator.vcxproj.user
 /DynamicsSimulator/venv/
 /DynamicsSimulator/output.csv
-/DynamicsSimulator/src/Test.cpp
 /DynamicsSimulator/src/Test.cpp
