@@ -371,3 +371,4 @@ FodyWeavers.xsd
 /DynamicsSimulator/DynamicsSimulator.vcxproj.filters
 /DynamicsSimulator/DynamicsSimulator.vcxproj.user
 /DynamicsSimulator/venv/
+/DynamicsSimulator/output.csv
