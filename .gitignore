@@ -361,3 +361,13 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+
+/Project.png
+/Project.xcf
+/DynamicsSimulator.sln
+/DynamicsSimulator/tennis-ball.png
+/DynamicsSimulator/DynamicsSimulator.vcxproj
+/DynamicsSimulator/DynamicsSimulator.vcxproj.filters
+/DynamicsSimulator/DynamicsSimulator.vcxproj.user
+/DynamicsSimulator/venv/
