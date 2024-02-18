@@ -37,13 +37,13 @@ int main() {
 	std::ofstream output;
 	output.open("output.csv");
 
-	while (Object.GetPosition().y >= 0.0f) {
+	while (Object.Position.y >= 0.0f) {
 		int64_t deltaTime = GetTimeMs() - previousTimestamp;
 		if (deltaTime > 5) {
 			previousTimestamp = GetTimeMs();
 			ReferenceFrame.UpdateObjects(deltaTime);
-			std::cout << "dt: " << GetTimeMs() - initialTimestamp << " " << Object.GetPosition() << "\t\ts: " << Object.GetSpeed() << "\t\ta: " << Object.GetAcceleration() << std::endl;
-			output << GetTimeMs() - initialTimestamp << "," << Object.GetPosition().x << "," << Object.GetPosition().y << ",\n";
+			std::cout << "dt: " << GetTimeMs() - initialTimestamp << " " << Object.Position << "\t\ts: " << Object.Speed << "\t\ta: " << Object.Acceleration << std::endl;
+			output << GetTimeMs() - initialTimestamp << "," << Object.Position.x << "," << Object.Position.y << ",\n";
 		}
 	}
 

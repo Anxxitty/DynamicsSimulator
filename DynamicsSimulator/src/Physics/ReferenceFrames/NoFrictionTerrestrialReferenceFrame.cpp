@@ -33,9 +33,9 @@ void NoFrictionTerrestrialReferenceFrame::UpdateObjects(int64_t deltaTime) {
 		}
 
 		// Computing position, speed and acceleration of the object
-		Object.SetPosition(Object.GetPosition() + Object.GetSpeed()  * fixedDeltaTime * 0.001f);
-		Object.SetSpeed(Object.GetSpeed() + Object.GetAcceleration() * fixedDeltaTime * 0.001f);
-		Object.SetAcceleration(SumOfForces / Object.Mass);
+		Object.Position += Object.Speed * fixedDeltaTime * 0.001f;
+		Object.Speed += Object.Acceleration * fixedDeltaTime * 0.001f;
+		Object.Acceleration = SumOfForces / Object.Mass;
 	}
 }
 
