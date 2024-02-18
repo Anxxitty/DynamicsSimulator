@@ -4,21 +4,21 @@
 
 
 MovableObject::MovableObject(float X, float Y, float Mass, Hitbox ObjectHitbox)
-	: m_Position(X, Y), Mass(Mass), m_Speed(0, 0), m_Acceleration(0, 0), ObjectHitbox(ObjectHitbox), ObjectGraphics(Graphics()) {
+	: m_Position(X, Y), m_Speed(0, 0), m_Acceleration(0, 0), Mass(Mass), ObjectHitbox(ObjectHitbox), ObjectGraphics(Graphics()) {
 #ifdef CONSTRUCTOR
 	std::cout << "Created a MovableObject" << std::endl;
 #endif
 }
 
 MovableObject::MovableObject(float X, float Y, float Mass, Hitbox ObjectHitbox, Graphics ObjectGraphics)
-	: m_Position(X, Y), Mass(Mass), m_Speed(0, 0), m_Acceleration(0, 0), ObjectHitbox(ObjectHitbox), ObjectGraphics(ObjectGraphics) {
+	: m_Position(X, Y), m_Speed(0, 0), m_Acceleration(0, 0), Mass(Mass), ObjectHitbox(ObjectHitbox), ObjectGraphics(ObjectGraphics) {
 #ifdef CONSTRUCTOR
 	std::cout << "Created a MovableObject" << std::endl;
 #endif
 }
 
 MovableObject::MovableObject(float X, float Y, float Mass, Vector2D InitialSpeed, Hitbox ObjectHitbox, Graphics ObjectGraphics)
-	: m_Position(X, Y), Mass(Mass), m_Speed(InitialSpeed), m_Acceleration(0, 0), ObjectHitbox(ObjectHitbox), ObjectGraphics(ObjectGraphics) {
+	: m_Position(X, Y), m_Speed(InitialSpeed), m_Acceleration(0, 0), Mass(Mass), ObjectHitbox(ObjectHitbox), ObjectGraphics(ObjectGraphics) {
 #ifdef CONSTRUCTOR
 	std::cout << "Created a MovableObject" << std::endl;
 #endif
@@ -26,7 +26,7 @@ MovableObject::MovableObject(float X, float Y, float Mass, Vector2D InitialSpeed
 
 #ifdef COPY_CONSTRUCTOR
 MovableObject::MovableObject(const MovableObject& _mo) 
-	: m_Position(_mo.m_Position), Mass(_mo.Mass), m_Speed(_mo.m_Speed), m_Acceleration(_mo.m_Acceleration), ObjectHitbox(_mo.ObjectHitbox), ObjectGraphics(_mo.ObjectGraphics) {
+	: m_Position(_mo.m_Position), m_Speed(_mo.m_Speed), m_Acceleration(_mo.m_Acceleration), Mass(_mo.Mass), ObjectHitbox(_mo.ObjectHitbox), ObjectGraphics(_mo.ObjectGraphics) {
 	std::cout << "Copy-Created a MovableObject" << std::endl;
 }
 #endif

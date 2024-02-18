@@ -1,9 +1,9 @@
 #pragma once
-#include "../../DynamicsSimulator.h"
+#include "DynamicsSimulator.h"
 
 #include "Hitbox.h"
-#include "../../Display/Graphics.h"
-#include "../Vector/Vector2D.h"
+#include "Display/Graphics.h"
+#include "Physics/Vector/Vector2D.h"
 
 class MovableObject {
 private:

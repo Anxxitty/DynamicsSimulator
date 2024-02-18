@@ -5,7 +5,7 @@
 
 #include "Physics/Physics.h"
 
-uint64_t GetTimeMs() {
+int64_t GetTimeMs() {
 	return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 }
 
@@ -32,13 +32,13 @@ int main() {
 	NoFrictionTerrestrialReferenceFrame ReferenceFrame;
 	MovableObject Object(0.0, initialHeight, mass, Force(initialSpeed, initialAngle), Hitbox(), Graphics());
 	ReferenceFrame.AddObject(Object);
-	uint64_t initialTimestamp = GetTimeMs();
-	uint64_t previousTimestamp = GetTimeMs();
+	int64_t initialTimestamp = GetTimeMs();
+	int64_t previousTimestamp = GetTimeMs();
 	std::ofstream output;
 	output.open("output.csv");
 
 	while (Object.GetPosition().y >= 0.0f) {
-		uint64_t deltaTime = GetTimeMs() - previousTimestamp;
+		int64_t deltaTime = GetTimeMs() - previousTimestamp;
 		if (deltaTime > 5) {
 			previousTimestamp = GetTimeMs();
 			ReferenceFrame.UpdateObjects(deltaTime);

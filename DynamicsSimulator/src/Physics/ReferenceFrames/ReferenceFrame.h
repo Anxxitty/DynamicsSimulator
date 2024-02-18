@@ -3,8 +3,8 @@
 #include <vector>
 #include <tuple>
 
-#include "../Force/Force.h"
-#include "../Objects/MovableObject.h"
+#include "Physics/Force/Force.h"
+#include "Physics/Objects/MovableObject.h"
 
 class ReferenceFrame {
 protected:
@@ -16,5 +16,6 @@ protected:
 public:
 	virtual void AddObject(MovableObject& MovableObject) = 0;
 	// TODO: GetObjects and RemoveObject
-	virtual void UpdateObjects(uint64_t deltaTime) = 0;
+	virtual void UpdateObjects(int64_t deltaTime) = 0;
+	virtual ~ReferenceFrame() = default;
 };

@@ -1,5 +1,5 @@
 #pragma once
-#include "../../DynamicsSimulator.h"
+#include "DynamicsSimulator.h"
 
 class Hitbox {
 public:

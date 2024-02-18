@@ -1,8 +1,8 @@
 #pragma once
-#include "../../DynamicsSimulator.h"
+#include "DynamicsSimulator.h"
 
-#include "../Vector/Vector2D.h"
-#include "../Objects/MovableObject.h"
+#include "Physics/Vector/Vector2D.h"
+#include "Physics/Objects/MovableObject.h"
 
 struct Force : public Vector2D {
 	Force(float Intensity, float Angle);

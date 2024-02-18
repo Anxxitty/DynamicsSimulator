@@ -1,6 +1,4 @@
 #include <iostream>
-#define _USE_MATH_DEFINES
-#include <math.h>
 
 #include "Force.h"
 
@@ -14,16 +12,16 @@ void Force::SetIntensity(float intensity) {
 }
 
 float Force::GetAngle() {
-	return std::round( (cosh(x / sqrt(x * x + y * y)) * 180.0 / M_PI) * 1000000.0 ) / 1000000.0;
+	return std::round( (cosh(x / sqrt(x * x + y * y)) * 180.0f / M_PIf) * 1000000.0f ) / 1000000.0f;
 }
 
 void Force::SetAngle(float angle) {
-	x = cos(angle * M_PI / 180.0) * sqrt(x * x + y * y);
-	y = sin(angle * M_PI / 180.0) * sqrt(x * x + y * y);
+	x = cos(angle * M_PIf / 180.0f) * sqrt(x * x + y * y);
+	y = sin(angle * M_PIf / 180.0f) * sqrt(x * x + y * y);
 }
 
 Force::Force(float Intensity, float Angle)
-	: Vector2D(cos(Angle * M_PI / 180.0) * Intensity, sin(Angle * M_PI / 180.0) * Intensity) {
+	: Vector2D(cos(Angle * M_PIf / 180.0f) * Intensity, sin(Angle * M_PIf / 180.0f) * Intensity) {
 #ifdef CONSTRUCTOR
 	std::cout << "Created a Force Class" << std::endl;
 #endif

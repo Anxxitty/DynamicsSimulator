@@ -1,5 +1,5 @@
 #pragma once
-#include "../../DynamicsSimulator.h"
+#include "DynamicsSimulator.h"
 
 #include "ReferenceFrame.h"
 
@@ -13,5 +13,6 @@ public:
 	NoFrictionTerrestrialReferenceFrame(const NoFrictionTerrestrialReferenceFrame& _trf);
 #endif
 	void AddObject(MovableObject& Object) override;
-	void UpdateObjects(uint64_t deltaTime) override;
+	void UpdateObjects(int64_t deltaTime) override;
+	virtual ~NoFrictionTerrestrialReferenceFrame() override;
 };
