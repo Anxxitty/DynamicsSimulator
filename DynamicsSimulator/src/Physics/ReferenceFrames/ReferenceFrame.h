@@ -16,5 +16,5 @@ protected:
 public:
 	virtual void AddObject(MovableObject& MovableObject) = 0;
 	// TODO: GetObjects and RemoveObject
-	virtual void UpdateObjects(double deltaTime) = 0;
+	virtual void UpdateObjects(uint64_t deltaTime) = 0;
 };

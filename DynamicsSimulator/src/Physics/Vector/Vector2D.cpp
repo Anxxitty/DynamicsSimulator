@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-Vector2D::Vector2D(double x, double y) 
+Vector2D::Vector2D(float x, float y)
 	: x(x), y(y) {
 #ifdef CONSTRUCTOR
 	std::cout << "Created a 2D Vector" << std::endl;
@@ -27,11 +27,11 @@ Vector2D& Vector2D::operator+=(const Vector2D& other)
 	return *this;
 }
 
-Vector2D Vector2D::operator*(const double& number) {
+Vector2D Vector2D::operator*(const float& number) {
 	return Vector2D(x * number, y * number);
 }
 
-Vector2D Vector2D::operator/(const double& number)
+Vector2D Vector2D::operator/(const float& number)
 {
 	return Vector2D(x / number, y / number);
 }

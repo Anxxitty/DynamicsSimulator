@@ -20,7 +20,7 @@ void NoFrictionTerrestrialReferenceFrame::AddObject(MovableObject& Object) {
 	m_ObjectsInReferenceFrame.push_back( ObjectAndForces(Object, std::vector<Force>{Force(Object.Mass * m_IntensityOfGravity, m_AngleOfGravity)}) );
 }
 
-void NoFrictionTerrestrialReferenceFrame::UpdateObjects(double deltaTime) {
+void NoFrictionTerrestrialReferenceFrame::UpdateObjects(uint64_t deltaTime) {
 	for (ObjectAndForces& objectAndForces : m_ObjectsInReferenceFrame) {
 		MovableObject& Object = std::get<0>(objectAndForces);
 		std::vector<Force> Forces = std::get<1>(objectAndForces);

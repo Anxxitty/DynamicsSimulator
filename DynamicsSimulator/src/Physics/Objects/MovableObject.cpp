@@ -3,21 +3,21 @@
 #include <iostream>
 
 
-MovableObject::MovableObject(double X, double Y, double Mass, Hitbox ObjectHitbox)
+MovableObject::MovableObject(float X, float Y, float Mass, Hitbox ObjectHitbox)
 	: m_Position(X, Y), Mass(Mass), m_Speed(0, 0), m_Acceleration(0, 0), ObjectHitbox(ObjectHitbox), ObjectGraphics(Graphics()) {
 #ifdef CONSTRUCTOR
 	std::cout << "Created a MovableObject" << std::endl;
 #endif
 }
 
-MovableObject::MovableObject(double X, double Y, double Mass, Hitbox ObjectHitbox, Graphics ObjectGraphics)
+MovableObject::MovableObject(float X, float Y, float Mass, Hitbox ObjectHitbox, Graphics ObjectGraphics)
 	: m_Position(X, Y), Mass(Mass), m_Speed(0, 0), m_Acceleration(0, 0), ObjectHitbox(ObjectHitbox), ObjectGraphics(ObjectGraphics) {
 #ifdef CONSTRUCTOR
 	std::cout << "Created a MovableObject" << std::endl;
 #endif
 }
 
-MovableObject::MovableObject(double X, double Y, double Mass, Vector2D InitialSpeed, Hitbox ObjectHitbox, Graphics ObjectGraphics) 
+MovableObject::MovableObject(float X, float Y, float Mass, Vector2D InitialSpeed, Hitbox ObjectHitbox, Graphics ObjectGraphics)
 	: m_Position(X, Y), Mass(Mass), m_Speed(InitialSpeed), m_Acceleration(0, 0), ObjectHitbox(ObjectHitbox), ObjectGraphics(ObjectGraphics) {
 #ifdef CONSTRUCTOR
 	std::cout << "Created a MovableObject" << std::endl;
@@ -35,7 +35,7 @@ Vector2D MovableObject::GetPosition() const {
 	return m_Position;
 }
 
-void MovableObject::SetPosition(double x, double y) {
+void MovableObject::SetPosition(float x, float y) {
 	m_Position.x = x;
 	m_Position.y = y;
 }

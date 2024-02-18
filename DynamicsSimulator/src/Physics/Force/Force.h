@@ -5,10 +5,10 @@
 #include "../Objects/MovableObject.h"
 
 struct Force : public Vector2D {
-	Force(double Intensity, double Angle);
+	Force(float Intensity, float Angle);
 
-	double GetIntensity();
-	void SetIntensity(double intensity);
-	double GetAngle();
-	void SetAngle(double angle);
+	float GetIntensity();
+	void SetIntensity(float intensity);
+	float GetAngle();
+	void SetAngle(float angle);
 };

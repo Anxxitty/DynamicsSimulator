@@ -5,13 +5,13 @@
 
 class NoFrictionTerrestrialReferenceFrame : public ReferenceFrame {
 private:
-	double m_IntensityOfGravity;
-	double m_AngleOfGravity;
+	float m_IntensityOfGravity;
+	float m_AngleOfGravity;
 public:
 	NoFrictionTerrestrialReferenceFrame();
 #ifdef COPY_CONSTRUCTOR
 	NoFrictionTerrestrialReferenceFrame(const NoFrictionTerrestrialReferenceFrame& _trf);
 #endif
 	void AddObject(MovableObject& Object) override;
-	void UpdateObjects(double deltaTime) override;
+	void UpdateObjects(uint64_t deltaTime) override;
 };
