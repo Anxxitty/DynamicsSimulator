@@ -10,8 +10,14 @@ int64_t GetTimeMs() {
 }
 
 
-int main() {
+int main(int argc, char* argv[]) {
 	std::cout << "Welcome to DynamicsSimulator" << std::endl;
+
+	const char* OutputFile;
+	if (argc > 0) 
+		OutputFile = argv[1];
+	else
+		OutputFile = "output.csv";
 
 	float mass;
 	std::cout << "Object Mass (kg): ";
@@ -35,7 +41,7 @@ int main() {
 	int64_t initialTimestamp = GetTimeMs();
 	int64_t previousTimestamp = GetTimeMs();
 	std::ofstream output;
-	output.open("output.csv");
+	output.open(OutputFile);
 
 	while (Object.Position.y >= 0.0f) {
 		int64_t deltaTime = GetTimeMs() - previousTimestamp;
