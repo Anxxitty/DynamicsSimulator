@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
 	std::cout << "Welcome to DynamicsSimulator" << std::endl;
 
 	const char* OutputFile;
-	if (argc > 0) 
+	if (argc > 1) 
 		OutputFile = argv[1];
 	else
 		OutputFile = "output.csv";
