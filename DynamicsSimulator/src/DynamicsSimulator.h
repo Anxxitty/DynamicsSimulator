@@ -1,6 +1,7 @@
 #pragma once
-// Math constants
+// Maths
 #define M_PIf 3.14159265358979f
+#include <cmath>
 
 // DEBUG
 // #define COPY_CONSTRUCTOR
