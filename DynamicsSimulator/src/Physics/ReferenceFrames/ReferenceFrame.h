@@ -1,4 +1,5 @@
 #pragma once
+#include "DynamicsSimulator.h"
 
 #include <vector>
 #include <tuple>
